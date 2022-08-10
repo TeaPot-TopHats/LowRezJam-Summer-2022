@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Maitham's Workstation/Main.unity
+    guid: ad801f02d002cb848b7b7ba1767166a6
+  - enabled: 1
+    path: Assets/Scenes/Maitham's Workstation/AudioTestScene.unity
+    guid: a93f83a7e5a7b6f43a974d4cd4f5c518
   m_configObjects: {}
