@@ -41,15 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 2773389157
+  - name: Floor
+    uniqueID: 1264363833
+    locked: 0
+  - name: BoP Wall
+    uniqueID: 1739468153
+    locked: 0
+  - name: BoP Decor
+    uniqueID: 3024269151
     locked: 0
   - name: Player
-    uniqueID: 921598765
+    uniqueID: 2782537593
     locked: 0
-  - name: Background
-    uniqueID: 117431939
+  - name: FoP Decor
+    uniqueID: 3347587989
     locked: 0
-  - name: Foreground
-    uniqueID: 1519000873
+  - name: FoP Wall
+    uniqueID: 4001667865
+    locked: 0
+  - name: UI
+    uniqueID: 2773389157
     locked: 0
