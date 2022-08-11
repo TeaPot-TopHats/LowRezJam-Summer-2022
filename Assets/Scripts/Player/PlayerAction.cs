@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour
 {
-    public void Move(Rigidbody2D Rigid, Vector2 Movement, float speed)
+    public void Move(Rigidbody2D Rigid, Rigidbody2D Rigid2, Vector2 Movement, float speed)
     {
         Movement.Normalize();
         Movement *= speed * Time.deltaTime;
         Rigid.velocity = Movement;
+        Rigid2.velocity = Movement;
     }
 
     public void Face(Rigidbody2D Rigid, Vector2 MousePosition)
@@ -22,5 +23,6 @@ public class PlayerAction : MonoBehaviour
     {
         GameObject projectile = Instantiate(Projectile, ProjectileSpawn.position, ProjectileSpawn.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(ProjectileSpawn.up * fireForce, ForceMode2D.Impulse);
+        GetComponent<Animator>().SetTrigger("Attack");
     }
 }
