@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.IO;
 
 public class JSONSavingScript : MonoBehaviour
 {
     private PlayerDataTest PlayerDataTest;
+ 
 
     private string path = "";
     private string persistentPath = "";
@@ -23,10 +25,12 @@ public class JSONSavingScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             SavaData();
+            
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
             LoadData();
+            
         }
     }// END OF UPDATE
     /**
@@ -36,7 +40,11 @@ public class JSONSavingScript : MonoBehaviour
      */
     private void CreatePlayerData()
     {
-    //    PlayerDataTest = new PlayerDataTest(PlayerDataTest.name, PlayerDataTest.health, PlayerDataTest.ammo, PlayerDataTest.AttackPower );
+         PlayerDataTest = new PlayerDataTest("Sussy", 666, 666, 666);
+        // PlayerDataTest = new PlayerDataTest(player.Name, player.health, player.ammo, player.attactPower);
+      
+        // PlayerDataTest.Name = "wow";
+
     }// END OF CREATEPLAYERDATA
 
     private void SetPaths()
@@ -48,9 +56,11 @@ public class JSONSavingScript : MonoBehaviour
 
     public void SavaData()
     {
-        string savaPath = persistentPath; // set saving path to path
+        string savaPath = path; // set saving path to path
 
-        Debug.Log("Saving Data at "+ savaPath);
+        Debug.Log("---------------------" 
+            + "Saving Data at "+ savaPath 
+            + "---------------------");
 
         string json = JsonUtility.ToJson(PlayerDataTest); // wrting the data to json file
         Debug.Log(json);
@@ -58,18 +68,27 @@ public class JSONSavingScript : MonoBehaviour
         using StreamWriter writer = new StreamWriter(savaPath); // steaming the save data to a file
         writer.Write(json);
 
-        Debug.Log("Saving has been successful");
+        Debug.Log("---------------------\n" + 
+            "Saving has been successful\n"
+            + "---------------------");
     }// END OF SAVADATA
 
     public void LoadData()
     {
-        Debug.Log("Loading Data From: " + persistentPath);
+        
+        Debug.Log("---------------------\n" 
+                  + "Loading Data From: \n" + path
+                  + "---------------------");
 
-        using StreamReader reader = new StreamReader(persistentPath); // load data from saved path
+        using StreamReader reader = new StreamReader(path); // load data from saved path
         string json = reader.ReadToEnd(); // tell json to read
         PlayerDataTest data = JsonUtility.FromJson<PlayerDataTest>(json); 
         Debug.Log(data.ToString());
-
-        Debug.Log("Loadng has been successful");
+        Debug.Log(data.ammo);
+        
+        
+        Debug.Log("---------------------\n" +
+            "Loadng has been successful\n"
+            +"---------------------------\n");
     }
 }// END OF CLASS
