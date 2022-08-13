@@ -5,21 +5,29 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] private Animator Animator;
+    [SerializeField] private Animator ModelAnimator;
+    [SerializeField] private Animator GunAnimator;
 
-    public void CheckFlip(Rigidbody2D Rigid, Vector2 MousePosition, SpriteRenderer SpriteRenderer)
+    /*public void CheckFlip(Rigidbody2D Rigid, Vector2 MousePosition, SpriteRenderer SpriteRenderer)
     {
         if (MousePosition.x < Rigid.position.x)
             SpriteRenderer.flipX = true;
         else
             SpriteRenderer.flipX = false;
 
+    }*/
+
+    public void Render(bool movement, Vector2 MousePosition)
+    {
+        ModelAnimator.SetFloat("horizontal", MousePosition.x);
+        ModelAnimator.SetFloat("vertical", MousePosition.y);
+        GunAnimator.SetFloat("Horizontal", MousePosition.x);
+        GunAnimator.SetFloat("Vertical", MousePosition.y);
+        ModelAnimator.SetBool("running", movement);
+        
     }
 
-    public void Render(bool movement)
-    {
-        Animator.SetBool("Moving", movement);
-    }
+
 
     /*[SerializeField] private SpriteRenderer renderer;
     [SerializeField] private Reanimator Reanimator;

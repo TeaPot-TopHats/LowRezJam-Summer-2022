@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] public GameObject Projectile;
     [SerializeField] public Transform ProjectileSpawn;
+    [SerializeField] public Transform Body;
     [SerializeField] public SpriteRenderer SpriteRenderer;
 
     [SerializeField] private bool moveable;
@@ -35,10 +36,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Debug.Log(PlayerRigid);
-        Debug.Log(PlayerInput.MousePosition);
-        Debug.Log(PlayerInput.CheckMoving());
-        Debug.Log(PlayerInput.attack);
         
     }
 
@@ -50,8 +47,12 @@ public class PlayerController : MonoBehaviour
             PlayerAction.Face(WeaponRigid, PlayerInput.MousePosition);
         if (PlayerInput.attack)
             PlayerAction.Attack(Projectile, ProjectileSpawn, fireForce);
-        PlayerAnimator.CheckFlip(PlayerRigid, PlayerInput.MousePosition, SpriteRenderer);
-        PlayerAnimator.Render(PlayerInput.CheckMoving());
+        //PlayerAnimator.CheckFlip(PlayerRigid, PlayerInput.MousePosition, SpriteRenderer);
+        PlayerAnimator.Render(PlayerInput.CheckMoving(), new Vector2(PlayerInput.MousePosition.x - Body.position.x, PlayerInput.MousePosition.y - Body.position.y));
+        if(WeaponRigid.rotation > 45 || WeaponRigid.rotation <= -135)
+            SpriteRenderer.sortingOrder = 0;
+        else
+            SpriteRenderer.sortingOrder = 3;
     }
 
     private int SetState(bool moving, bool attacking)
@@ -61,5 +62,10 @@ public class PlayerController : MonoBehaviour
         if (moving && moveable)
             return 1;
         return 0;
+    }
+
+    public void Attacked()
+    {
+
     }
 }

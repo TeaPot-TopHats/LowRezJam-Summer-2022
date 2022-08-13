@@ -15,7 +15,7 @@ public class PlayerAction : MonoBehaviour
     public void Face(Rigidbody2D Rigid, Vector2 MousePosition)
     {
         Vector2 AimDirection = MousePosition - Rigid.position;
-        float aimAngle = Mathf.Atan2(AimDirection.y, AimDirection.x) * Mathf.Rad2Deg - 90f;
+        float aimAngle = Mathf.Atan2(AimDirection.y, AimDirection.x) * Mathf.Rad2Deg;
         Rigid.rotation = aimAngle;
     }
 
@@ -24,5 +24,10 @@ public class PlayerAction : MonoBehaviour
         GameObject projectile = Instantiate(Projectile, ProjectileSpawn.position, ProjectileSpawn.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(ProjectileSpawn.up * fireForce, ForceMode2D.Impulse);
         GetComponent<Animator>().SetTrigger("Attack");
+    }
+
+    public void Attacked()
+    {
+
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 233793661}
   - component: {fileID: 233793660}
   - component: {fileID: 233793663}
-  - component: {fileID: 233793664}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -28,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233793659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.96140647, y: -0.7999664, z: -10.064814}
+  m_LocalPosition: {x: -37.001232, y: 29.163465, z: -8.990797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9128503417946373622}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -4.091, z: 0}
 --- !u!20 &233793661
 Camera:
   m_ObjectHideFlags: 0
@@ -62,7 +61,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 4.53
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -113,26 +112,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &233793664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233793659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AssetsPPU: 100
-  m_RefResolutionX: 64
-  m_RefResolutionY: 64
-  m_UpscaleRT: 0
-  m_PixelSnapping: 0
-  m_CropFrameX: 0
-  m_CropFrameY: 0
-  m_StretchFill: 0
 --- !u!1 &1143384435
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342215224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.96140647, y: -0.7999664, z: -10.064814}
+  m_LocalPosition: {x: -37.001232, y: 29.163465, z: -8.990797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -271,7 +250,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10
+    OrthographicSize: 4.53
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
