@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerDataTest
 {
-  
-    public string Name;
-    public float health;
-    public float ammo;
-    public float AttackPower;
+
+    [SerializeField] public string Name;
+    [SerializeField] public float health;
+    [SerializeField] public float ammo;
+    [SerializeField] public float AttackPower;
 
     public PlayerDataTest(string name, float health, float ammo, float attackPower)
     {
@@ -18,12 +18,15 @@ public class PlayerDataTest
         this.ammo = ammo;
         this.AttackPower = attackPower;
 
-        //name = "Lao";
-        //health = 500;
-        //ammo = 100;
-        //attackPower = 150;
+        //PlayerPrefs.SetString("name", name);
+        //PlayerPrefs.SetFloat("health", health);
+        //PlayerPrefs.SetFloat("ammo", ammo);
+        //PlayerPrefs.SetFloat("attackpower", attackPower);
+
     }// CONSTRUCTOR
-   
+
+
+
     public override string ToString()
     {
         return $"{Name} is at {health} HP with {ammo} ammo with Attack Power {AttackPower}";

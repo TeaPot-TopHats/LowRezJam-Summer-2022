@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maitham's Workstation/AudioTestScene.unity
     guid: a93f83a7e5a7b6f43a974d4cd4f5c518
+  - enabled: 1
+    path: Assets/Scenes/Maitham's Workstation/GameZoneTest.unity
+    guid: ea5d1cfd7a9db8e4ca509e24116bdce0
   m_configObjects: {}
