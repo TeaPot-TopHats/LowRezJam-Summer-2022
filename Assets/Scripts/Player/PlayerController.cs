@@ -10,12 +10,15 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Rigidbody2D PlayerRigid;
     [SerializeField] private Rigidbody2D WeaponRigid;
+    [SerializeField] private LayerMask EnemyLayer;
 
     [SerializeField] public GameObject Projectile;
     [SerializeField] public Transform ProjectileSpawn;
     [SerializeField] public Transform Body;
+    [SerializeField] public Transform AttackZone;
     [SerializeField] public SpriteRenderer SpriteRenderer;
 
+    [SerializeField] private float attackArea;
     [SerializeField] private bool moveable;
     [SerializeField] private bool turnable;
     [SerializeField] private float moveSpeed;
@@ -36,7 +39,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        
+        if(WeaponRigid.GetComponent<Transform>().position != Body.position)
+        {
+            WeaponRigid.GetComponent<Transform>().position = Body.position;
+        }
     }
 
     private void FixedUpdate()
@@ -45,10 +51,14 @@ public class PlayerController : MonoBehaviour
             PlayerAction.Move(PlayerRigid, WeaponRigid, PlayerInput.MovementInput, moveSpeed);
         if (turnable)
             PlayerAction.Face(WeaponRigid, PlayerInput.MousePosition);
-        if (PlayerInput.attack)
-            PlayerAction.Attack(Projectile, ProjectileSpawn, fireForce);
+        if (PlayerInput.attack && Physics2D.OverlapCircle(AttackZone.position, attackArea, EnemyLayer))
+        {
+            Physics2D.OverlapCircle(AttackZone.position, attackArea, EnemyLayer).GetComponent<EnemyActions>().Burning();
+            Physics2D.OverlapCircle(AttackZone.position, attackArea, EnemyLayer).GetComponent<EnemyActions>().Attacked();
+        }
+            
         //PlayerAnimator.CheckFlip(PlayerRigid, PlayerInput.MousePosition, SpriteRenderer);
-        PlayerAnimator.Render(PlayerInput.CheckMoving(), new Vector2(PlayerInput.MousePosition.x - Body.position.x, PlayerInput.MousePosition.y - Body.position.y));
+        PlayerAnimator.Render(PlayerInput.CheckMoving(), new Vector2(PlayerInput.MousePosition.x - Body.position.x, PlayerInput.MousePosition.y - Body.position.y), PlayerInput.attack);
         if(WeaponRigid.rotation > 45 || WeaponRigid.rotation <= -135)
             SpriteRenderer.sortingOrder = 0;
         else
@@ -66,6 +76,13 @@ public class PlayerController : MonoBehaviour
 
     public void Attacked()
     {
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(AttackZone.position, attackArea);
 
     }
 }

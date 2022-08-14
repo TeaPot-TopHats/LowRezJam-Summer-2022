@@ -31,4 +31,9 @@ public class EnemyActions : MonoBehaviour
     {
 
     }
+
+    public void Burning()
+    {
+
+    }
 }

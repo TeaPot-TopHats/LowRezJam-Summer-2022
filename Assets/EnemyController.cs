@@ -120,7 +120,7 @@ public class EnemyController : MonoBehaviour
                     yield return Attacking();
             }
             else
-                EnemyActions.Move(Rigid, transform.position - EnemySensors.TargetPosition, moveSpeed);
+                EnemyActions.Move(Rigid, EnemySensors.TargetPosition -transform.position, moveSpeed);
             yield return null;
         }
         yield return null;
@@ -152,6 +152,16 @@ public class EnemyController : MonoBehaviour
     {
         Debug.Log("deaded");
         yield break;
+
+    }
+
+    public void Attacked()
+    {
+
+    }
+
+    public void Burning()
+    {
 
     }
 }
