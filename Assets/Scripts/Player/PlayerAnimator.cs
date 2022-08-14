@@ -7,6 +7,8 @@ public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField] private Animator ModelAnimator;
     [SerializeField] private Animator GunAnimator;
+    [SerializeField] private Animator FlameAnimator;
+    [SerializeField] private bool flameStatus;
 
     /*public void CheckFlip(Rigidbody2D Rigid, Vector2 MousePosition, SpriteRenderer SpriteRenderer)
     {
@@ -17,15 +19,30 @@ public class PlayerAnimator : MonoBehaviour
 
     }*/
 
-    public void Render(bool movement, Vector2 MousePosition)
+    public void Render(bool movement, Vector2 MousePosition, bool flaming)
     {
         ModelAnimator.SetFloat("horizontal", MousePosition.x);
         ModelAnimator.SetFloat("vertical", MousePosition.y);
         GunAnimator.SetFloat("Horizontal", MousePosition.x);
         GunAnimator.SetFloat("Vertical", MousePosition.y);
         ModelAnimator.SetBool("running", movement);
-        
+
+        if (flaming == true && flameStatus != flaming)
+        {
+            flameStatus = flaming;
+            FlameAnimator.SetTrigger("Burn");
+        }
+        else if (flaming == false && flameStatus != flaming)
+        {
+            flameStatus = flaming;
+            FlameAnimator.SetTrigger("Stop");
+        }
+        else
+            FlameAnimator.SetBool("Burning", flameStatus);
+
+
     }
+
 
 
 

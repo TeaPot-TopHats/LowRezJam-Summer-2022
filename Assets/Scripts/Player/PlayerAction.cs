@@ -19,12 +19,12 @@ public class PlayerAction : MonoBehaviour
         Rigid.rotation = aimAngle;
     }
 
-    public void Attack(GameObject Projectile, Transform ProjectileSpawn, float fireForce)
+    /*public void Attack(GameObject Projectile, Transform ProjectileSpawn, float fireForce)
     {
         GameObject projectile = Instantiate(Projectile, ProjectileSpawn.position, ProjectileSpawn.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(ProjectileSpawn.up * fireForce, ForceMode2D.Impulse);
         GetComponent<Animator>().SetTrigger("Attack");
-    }
+    }*/
 
     public void Attacked()
     {
