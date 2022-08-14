@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: ProjectileSpawn
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -96,8 +96,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1441328229}
   - component: {fileID: 1441328230}
+  - component: {fileID: 132941344}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,9 +111,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441328228}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.33, z: 0.07401577}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1129841230}
@@ -156,20 +157,40 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.25819153, g: 0.041429326, b: 0.46226418, a: 1}
+  m_SortingLayerID: -1512429703
+  m_SortingLayer: 4
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 0.49411765, g: 0.8980392, b: 0.8509804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.75, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &132941344
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441328228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c69045dad6bdf3441b80b6ad72715cd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7691079371480432825
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,10 +202,13 @@ GameObject:
   - component: {fileID: 3365805522054209706}
   - component: {fileID: 1576066586}
   - component: {fileID: 1576066588}
+  - component: {fileID: 1576066593}
   - component: {fileID: 1576066585}
   - component: {fileID: 1576066589}
   - component: {fileID: 1576066590}
-  m_Layer: 0
+  - component: {fileID: 1576066591}
+  - component: {fileID: 1576066592}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -227,7 +251,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1576066588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -266,11 +290,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e4a60d00e9aae88409a79a0e999e9ed5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingLayerID: -1512429703
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1653116387, guid: ff90bc5231a8c8240989974d38d77f9f, type: 3}
+  m_Color: {r: 0.49461553, g: 0.8962264, b: 0.85131395, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -280,6 +304,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1576066593
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691079371480432825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7556639abb5b624692094c3f3cb4ef0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1576066585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,14 +351,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInput: {fileID: 1576066585}
   PlayerAction: {fileID: 1576066590}
+  PlayerAnimator: {fileID: 1576066592}
   PlayerRigid: {fileID: 1576066586}
   WeaponRigid: {fileID: 1129841229}
   Projectile: {fileID: 5896907426265547096, guid: b3b3d92d3ccffff4e890c30078543ef8, type: 3}
   ProjectileSpawn: {fileID: 857672219}
+  Body: {fileID: 3365805522054209706}
+  SpriteRenderer: {fileID: 1441328230}
   moveable: 1
   turnable: 1
   moveSpeed: 100
   fireForce: 100
+  state: 0
 --- !u!114 &1576066590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,3 +375,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800a7c5e253e0de4faff3c9e553e5604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1576066591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691079371480432825}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 11400000, guid: 87f20901541ed814c8770974b08fc5d5, type: 2}
+  renderer: {fileID: 1576066588}
+  fps: 12
+  temporaryDrivers: []
+--- !u!114 &1576066592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691079371480432825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe3527ce5755bf4383ff596215615d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ModelAnimator: {fileID: 1576066593}
+  GunAnimator: {fileID: 132941344}

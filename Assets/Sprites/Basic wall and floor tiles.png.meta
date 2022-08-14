@@ -3612,8 +3612,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basic wall and floor tiles_12: -936748110
-      Basic wall and floor tiles_75: 1471430766
+      Basic wall and floor tiles_18: -1094096748
       Basic wall and floor tiles_161: -1121642176
       Basic wall and floor tiles_104: -1188109562
       Basic wall and floor tiles_124: -1461074217
@@ -3621,12 +3620,12 @@ TextureImporter:
       Basic wall and floor tiles_67: -752127247
       Basic wall and floor tiles_89: 1785879110
       Basic wall and floor tiles_159: 1261340549
-      Basic wall and floor tiles_23: 595620750
       Basic wall and floor tiles_34: -1676870531
       Basic wall and floor tiles_147: -568092101
       Basic wall and floor tiles_164: -787103469
       Basic wall and floor tiles_116: -1851077598
       Basic wall and floor tiles_97: 2105097032
+      Basic wall and floor tiles_154: 927508902
       Basic wall and floor tiles_5: -117353818
       Basic wall and floor tiles_61: -902858126
       Basic wall and floor tiles_134: 849190845
@@ -3771,13 +3770,13 @@ TextureImporter:
       Basic wall and floor tiles_17: -1191063143
       Basic wall and floor tiles_46: 496460535
       Basic wall and floor tiles_145: 1093275809
-      Basic wall and floor tiles_143: 1314606831
-      Basic wall and floor tiles_154: 927508902
-      Basic wall and floor tiles_7: 1804303276
-      Basic wall and floor tiles_3: 1061526138
-      Basic wall and floor tiles_79: 612834634
-      Basic wall and floor tiles_18: -1094096748
       Basic wall and floor tiles_35: 1901978334
+      Basic wall and floor tiles_143: 1314606831
+      Basic wall and floor tiles_7: 1804303276
+      Basic wall and floor tiles_75: 1471430766
+      Basic wall and floor tiles_3: 1061526138
+      Basic wall and floor tiles_23: 595620750
+      Basic wall and floor tiles_12: -936748110
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
