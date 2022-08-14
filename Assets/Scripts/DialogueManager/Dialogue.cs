@@ -7,6 +7,7 @@ public class Dialogue
 {
     public string name;
     [TextArea(3,10)]
+    [NonReorderable]
     public string[] sentences;
 }// end of class
 

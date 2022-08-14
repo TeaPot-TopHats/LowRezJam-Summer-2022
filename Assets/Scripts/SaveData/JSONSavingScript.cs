@@ -7,11 +7,13 @@ using System.IO;
 public class JSONSavingScript : MonoBehaviour
 {
     
+    
     public Playerstat myplayer = new Playerstat();
     private string path = "";
     private string persistentPath = "";
     // Start is called before the first frame update
 
+   
  
   
     void Start()
