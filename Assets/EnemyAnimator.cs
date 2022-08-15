@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class EnemyAnimator : MonoBehaviour
 {
-    [SerializeField] private Animator Animator;
+    [SerializeField] private Animator AmogusAnimator;
+    [SerializeField] private Animator FireAnimator;
     [SerializeField] private bool faceRight;
 
     // Update is called once per frame
     public void MovementRender(bool movement)
     {
-        Animator.SetBool("Moving", movement);
+        AmogusAnimator.SetBool("Moving", movement);
     }
 
     public void AttackAnim()
     {
-        Animator.SetTrigger("Attack");
+        AmogusAnimator.SetTrigger("Attack");
     }
     public void CheckFlip(Rigidbody2D Rigid, Transform Transform)
     {
@@ -31,4 +32,16 @@ public class EnemyAnimator : MonoBehaviour
         }
 
     }
+
+    public void SetBurnAnim(bool burning)
+    {
+        FireAnimator.SetBool("Burning", burning);
+    }
+
+    public void SetDeath(bool dead)
+    {
+        AmogusAnimator.SetBool("Dead", dead);
+    }
+
+    
 }

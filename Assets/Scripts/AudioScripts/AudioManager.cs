@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private AudioMixerGroup soundEffectsMixerGroup;
     [SerializeField] private AudioMixerGroup musicMixerGroup;
-    [SerializeField] private Sound[] sounds;
+    [SerializeField] [NonReorderable] private Sound[] sounds;
 
     public void Start()
     {
