@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Maitham's Workstation/Main.unity
-    guid: ad801f02d002cb848b7b7ba1767166a6
-  - enabled: 0
-    path: Assets/Scenes/Maitham's Workstation/AudioTestScene.unity
-    guid: a93f83a7e5a7b6f43a974d4cd4f5c518
+    path: Assets/Scenes/Maitham's Workstation/FinalBuildTest/Main.unity
+    guid: d1ece6d2cf56a894ea52febd2146396c
   - enabled: 1
-    path: Assets/Scenes/Maitham's Workstation/GameZoneTest.unity
-    guid: ea5d1cfd7a9db8e4ca509e24116bdce0
+    path: Assets/Scenes/Maitham's Workstation/FinalBuildTest/SampleScene.unity
+    guid: 894633f6f6c472f4ea9067b399a86723
+  - enabled: 1
+    path: Assets/Scenes/Maitham's Workstation/FinalBuildTest/Map Area 0.unity
+    guid: 732709cf31fe080499749e2c4c943aa8
+  - enabled: 1
+    path: Assets/Scenes/Maitham's Workstation/FinalBuildTest/GameOver.unity
+    guid: 7d77f4577847fff46948af7e2f25aa2d
   m_configObjects: {}

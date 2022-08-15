@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -103,6 +105,7 @@ public class PlayerController : MonoBehaviour
     {
         enabled = false;
         PlayerInput.enabled = false;
+        SceneManager.LoadScene("GameOver");
     }
 
     public void StartUp()

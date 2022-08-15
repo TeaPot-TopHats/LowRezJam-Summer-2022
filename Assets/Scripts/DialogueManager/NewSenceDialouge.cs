@@ -9,13 +9,11 @@ public class NewSenceDialouge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        DialogueManager.instance.StartDialogue(dialogue);
+       // DialogueManager.instance.StartDialogue(dialogue);
+       FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         
     }
-    private void Update()
-    {
-        
-    }
+ 
 
 
 }

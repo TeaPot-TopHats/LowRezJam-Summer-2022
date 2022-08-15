@@ -7,8 +7,13 @@ public class Dialogue_PopUp_OnTriggerEnter : MonoBehaviour
     public Dialogue dialogue;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DialogueManager.instance.StartDialogue(dialogue);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            DialogueManager.instance.StartDialogue(dialogue);
+        }
+      //  DialogueManager.instance.StartDialogue(dialogue);
+      //  Destroy(gameObject);
         //FindObjectOfType<AudioManager>().Play("dead3");
-        AudioManager.instance.Play("dead3");
+       // AudioManager.instance.Play("dead3");
     }
 }

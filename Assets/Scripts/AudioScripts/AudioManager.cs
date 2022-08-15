@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-      //  DontDestroyOnLoad(gameObject);
+         DontDestroyOnLoad(gameObject);
         
 
         foreach( Sound s in sounds)
@@ -61,7 +61,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, dummySound => dummySound.clipName == clipname);
         if( s == null)
         {
-            Debug.LogError("sound:" + clipname + "does NOT exist!");
+            Debug.LogError("sound:" + clipname + " does NOT exist!");
             return;
         }
         s.source.Play();
