@@ -27,6 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        FindObjectOfType<PauseMenu>().UnlockMouseCursor();
         animator.SetBool("IsOpen", true);
        // Debug.Log("Starting conversation with " + dialogue.name);
         nameText.text = dialogue.name;
@@ -47,7 +48,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-
+        
          string sentence = sentences.Dequeue();
          StopAllCoroutines();
          StartCoroutine(TypeSentence(sentence));
@@ -70,8 +71,9 @@ public class DialogueManager : MonoBehaviour
 
    void EndDialogue()
     {
+        FindObjectOfType<PauseMenu>().LockMouseCursor();
         animator.SetBool("IsOpen", false);
-        
+         
        // Debug.Log("End Of Conversation");
     }
 }

@@ -211,7 +211,10 @@ public class EnemyController : MonoBehaviour
     public void Burning()
     {
         if (!burning)
+        {
             burning = true; AudioManager.instance.Play("onFire");
+            EnemySensors.Player.GetComponent<JSONSavingScript>().myplayer.killCount++;
+        }
         if (burnTimer <= 0)
         {
             burnTimer = startBurnTimer;

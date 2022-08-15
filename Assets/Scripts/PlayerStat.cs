@@ -8,8 +8,9 @@ public class Playerstat
     public string Name;
     public float health;
     public float maxAmmo;
-    public float maxHealth = 20;
-    public float ammo = 100;
+    public float maxHealth;
+    public float ammo;
+    public int killCount;
 
     /*public override string ToString()
     {
