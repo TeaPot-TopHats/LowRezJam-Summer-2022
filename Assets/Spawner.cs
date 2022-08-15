@@ -9,8 +9,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Vector3 position;
     [SerializeField] private Transform Transform;
     [SerializeField] private float timer;
-    [SerializeField] private float min;
-    [SerializeField] private float max;
+    [SerializeField] public float min;
+    [SerializeField] public float max;
     [SerializeField] private float radius;
     [SerializeField] private float antiRadius;
 
