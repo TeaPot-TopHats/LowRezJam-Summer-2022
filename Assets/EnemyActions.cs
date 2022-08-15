@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyActions : MonoBehaviour
 {
+    public EnemySensors EnemySensors;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +22,12 @@ public class EnemyActions : MonoBehaviour
         Rigid.velocity = moveDirection * speed;
     }
 
-    public void Attack(Collider2D target)
+    public void Attack()
     {
-        Debug.Log("Slime attacking player");
-        //target.GetComponent<PlayerController>().Attacked();
+        Debug.Log(EnemySensors.Player);
+        Debug.Log(EnemySensors.Player.GetComponent<PlayerController>());
+        EnemySensors.Player.GetComponent<PlayerController>().Attacked();
     }
-
     public void Attacked()
     {
 

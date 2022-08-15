@@ -27,23 +27,7 @@ public class JSONSavingScript : MonoBehaviour
     }// END OF START
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Debug.Log(myplayer.health);
 
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadData();
-
-        }
-        // LoadData();
-
-
-
-    }// END OF UPDATE
     /**
      * creater a player data in this method.
      * this is making a new instant of player data and currently has 4 arguments player {name, health, ammo, attack power} more can be adding 

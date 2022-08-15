@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -3612,7 +3612,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basic wall and floor tiles_18: -1094096748
+      Basic wall and floor tiles_23: 595620750
       Basic wall and floor tiles_161: -1121642176
       Basic wall and floor tiles_104: -1188109562
       Basic wall and floor tiles_124: -1461074217
@@ -3625,7 +3625,7 @@ TextureImporter:
       Basic wall and floor tiles_164: -787103469
       Basic wall and floor tiles_116: -1851077598
       Basic wall and floor tiles_97: 2105097032
-      Basic wall and floor tiles_154: 927508902
+      Basic wall and floor tiles_143: 1314606831
       Basic wall and floor tiles_5: -117353818
       Basic wall and floor tiles_61: -902858126
       Basic wall and floor tiles_134: 849190845
@@ -3690,13 +3690,13 @@ TextureImporter:
       Basic wall and floor tiles_57: -454804522
       Basic wall and floor tiles_78: -244993915
       Basic wall and floor tiles_109: 1025914135
+      Basic wall and floor tiles_133: -1815102866
       Basic wall and floor tiles_105: -852283400
       Basic wall and floor tiles_22: 698933403
+      Basic wall and floor tiles_157: 436556560
       Basic wall and floor tiles_38: -631860316
-      Basic wall and floor tiles_133: -1815102866
       Basic wall and floor tiles_1: -615746639
       Basic wall and floor tiles_117: 1127094326
-      Basic wall and floor tiles_157: 436556560
       Basic wall and floor tiles_148: 490102537
       Basic wall and floor tiles_135: -1767124750
       Basic wall and floor tiles_90: -246198522
@@ -3770,12 +3770,12 @@ TextureImporter:
       Basic wall and floor tiles_17: -1191063143
       Basic wall and floor tiles_46: 496460535
       Basic wall and floor tiles_145: 1093275809
+      Basic wall and floor tiles_154: 927508902
       Basic wall and floor tiles_35: 1901978334
-      Basic wall and floor tiles_143: 1314606831
-      Basic wall and floor tiles_7: 1804303276
       Basic wall and floor tiles_75: 1471430766
+      Basic wall and floor tiles_7: 1804303276
       Basic wall and floor tiles_3: 1061526138
-      Basic wall and floor tiles_23: 595620750
+      Basic wall and floor tiles_18: -1094096748
       Basic wall and floor tiles_12: -936748110
   spritePackingTag: 
   pSDRemoveMatte: 0

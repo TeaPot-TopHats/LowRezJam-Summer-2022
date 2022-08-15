@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1325891661}
   - component: {fileID: 1325891663}
   - component: {fileID: 1325891662}
+  - component: {fileID: 1542248322}
   m_Layer: 0
   m_Name: Flames
   m_TagString: Untagged
@@ -210,11 +211,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1512429703
+  m_SortingLayerID: 818792659
   m_SortingLayer: 4
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 0.54467607, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -224,6 +225,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1542248322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325891660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef8cfd3d4ac0c46bd272b2c3745cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1441328228
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,11 +308,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1512429703
+  m_SortingLayerID: 818792659
   m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 1571875078, guid: ff90bc5231a8c8240989974d38d77f9f, type: 3}
-  m_Color: {r: 0.49411765, g: 0.8980392, b: 0.8509804, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -347,6 +360,7 @@ GameObject:
   - component: {fileID: 1576066591}
   - component: {fileID: 1576066592}
   - component: {fileID: 1576066596}
+  - component: {fileID: 1576066597}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -429,11 +443,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1512429703
+  m_SortingLayerID: 818792659
   m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 688297548, guid: ff90bc5231a8c8240989974d38d77f9f, type: 3}
-  m_Color: {r: 0.49461553, g: 0.8962264, b: 0.85131395, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -491,6 +505,7 @@ MonoBehaviour:
   PlayerInput: {fileID: 1576066585}
   PlayerAction: {fileID: 1576066590}
   PlayerAnimator: {fileID: 1576066592}
+  PlayerStats: {fileID: 1576066597}
   PlayerRigid: {fileID: 1576066586}
   WeaponRigid: {fileID: 1129841229}
   EnemyLayer:
@@ -504,7 +519,8 @@ MonoBehaviour:
   attackArea: 0.79
   moveable: 1
   turnable: 1
-  moveSpeed: 100
+  firing: 0
+  moveSpeed: 121.8
   fireForce: 100
   state: 0
 --- !u!114 &1576066590
@@ -577,3 +593,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8772392, y: 1.7623425}
   m_EdgeRadius: 0
+--- !u!114 &1576066597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691079371480432825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d730cffcfcc694d978352d7337e23e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myplayer:
+    Name: Magnus
+    health: 5
+    maxAmmo: 200
+    maxHealth: 5
+    ammo: 200
