@@ -12,15 +12,22 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private AudioMixerGroup soundEffectsMixerGroup;
     [SerializeField] private AudioMixerGroup musicMixerGroup;
-    [SerializeField] private Sound[] sounds;
+    [SerializeField][NonReorderable] private Sound[] sounds;
 
-    public void Start()
-    {
-        
-    }
     private void Awake()
+
     {
-        instance = this;
+
+        if(instance == null)
+        {
+            instance = this;
+        }else
+        {
+            Destroy(gameObject);
+            return;
+        }
+      //  DontDestroyOnLoad(gameObject);
+        
 
         foreach( Sound s in sounds)
         {
